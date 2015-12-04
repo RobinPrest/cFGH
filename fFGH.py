@@ -3,7 +3,7 @@
 /***************************************************************************
  cFGH
                                  A QGIS plugin
- Un plugon fantastique
+ Un plugin fantastique
                               -------------------
         begin                : 2015-12-04
         git sha              : $Format:%H$
@@ -65,8 +65,8 @@ class cFGH:
         self.actions = []
         self.menu = self.tr(u'&Plugin Geohyd')
         # TODO: We are going to let the user set this up in a future iteration
-        self.toolbar = self.iface.addToolBar(u'cFGH')
-        self.toolbar.setObjectName(u'cFGH')
+        self.toolbar = self.iface.addToolBar(u'Barre d"outil GeoHyd')
+        self.toolbar.setObjectName(u'Outil GeoHyd')
 
     # noinspection PyMethodMayBeStatic
     def tr(self, message):

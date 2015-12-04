@@ -3,11 +3,11 @@
 /***************************************************************************
  cFGH
                                  A QGIS plugin
- Un plugon fantastique
+ Un plugin fantastique
                              -------------------
         begin                : 2015-12-04
         copyright            : (C) 2015 by Robin
-        email                : robin.prest@anteagroup.com
+        email                : robin@a.com
         git sha              : $Format:%H$
  ***************************************************************************/
 

@@ -3,12 +3,12 @@
 /***************************************************************************
  cFGHDialog
                                  A QGIS plugin
- Un plugon fantastique
+ Un plugin fantastique
                              -------------------
         begin                : 2015-12-04
         git sha              : $Format:%H$
         copyright            : (C) 2015 by Robin
-        email                : robin.prest@anteagroup.com
+        email                : robin@a.com
  ***************************************************************************/
 
 /***************************************************************************

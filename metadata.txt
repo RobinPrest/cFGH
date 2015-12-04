@@ -1,0 +1,39 @@
+# This file contains metadata for your plugin. Since 
+# version 2.0 of QGIS this is the proper way to supply 
+# information about a plugin. The old method of 
+# embedding metadata in __init__.py will 
+# is no longer supported since version 2.0.
+
+# This file should be included when you package your plugin.# Mandatory items:
+
+[general]
+name=Plugin Geohyd
+qgisMinimumVersion=2.0
+description=Un plugon fantastique
+version=0.1
+author=Robin
+email=robin.prest@anteagroup.com
+
+about=Un plugin qui fait plein de choses merveilleuses
+
+tracker=https://github.com/RobinPrest/AGH/issues
+repository=https://github.com/RobinPrest/AGH
+# End of mandatory metadata
+
+# Recommended items:
+
+# Uncomment the following line and add your changelog:
+# changelog=
+
+# Tags are comma separated with spaces allowed
+tags=plugin QGIS
+
+homepage=https://github.com/RobinPrest/AGH
+category=Plugins
+icon=icon.png
+# experimental flag
+experimental=True
+
+# deprecated flag (applies to the whole plugin, not just a single version)
+deprecated=False
+

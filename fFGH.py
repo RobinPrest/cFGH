@@ -70,7 +70,9 @@ class cFGH:
         # TODO: We are going to let the user set this up in a future iteration
         self.toolbar = self.iface.addToolBar(u'Barre d"outil GeoHyd')
         self.toolbar.setObjectName(u'Outil GeoHyd')
-		
+
+	#init map canvas
+        self.mCanvas = self.iface.mapCanvas()
 		
 
     # noinspection PyMethodMayBeStatic
@@ -186,8 +188,15 @@ class cFGH:
 
     def run(self):
         """Run method that performs all the real work"""
+
+
+        
         # Signal : En cliquant sur le bouton fLoadLayers on lance la fonction derrière le bouton pbLoadLayers
         self.dlg.pbLoadLayers.clicked.connect(self.fLoadLayers)
+
+        # Signal : En sélectionnant un item dans cbListLayers on lance la fonction fAddFields
+        #self.dlg.cbListLayers est un QComboBox qui lance un signal quand on selectionne un truc
+        self.dlg.cbListLayers.currentIndexChanged.connect(self.fAddFields)
 
         # show the dialog
         self.dlg.show()
@@ -199,22 +208,21 @@ class cFGH:
         if result:
             pass
 			
-    # On crée le code derrière le bouton pbLoadLayers déclenché lors du clic
+    # On crée le code derrière le bouton pbLoadLayers pour charger le nom des couches
     def fLoadLayers(self):
-        mCanvas = self.iface.mapCanvas()
         self.dlg.cbListLayers.clear()
-        for i in mCanvas.layers():
+        for i in self.mCanvas.layers():
            self.dlg.cbListLayers.addItem(i.name())
-
-
-
-
-
-
-
-
-
-
-
-
-        
+    
+    def fAddFields(self):
+        iCurrentText = self.dlg.cbListLayers.currentText()
+        lstLayers = self.mCanvas.layers()
+        for i in lstLayers:
+            if i.name() == iCurrentText:
+                self.dlg.lwFields.clear()
+                lstFields = i.pendingFields()
+                for j in lstFields:
+                    self.dlg.lwFields.addItem(j.name())
+            else:
+                pass
+    

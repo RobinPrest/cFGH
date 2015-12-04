@@ -29,16 +29,6 @@
     <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
    </property>
   </widget>
-  <widget class="QTextBrowser" name="txtbroZone">
-   <property name="geometry">
-    <rect>
-     <x>9</x>
-     <y>35</y>
-     <width>251</width>
-     <height>221</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QCheckBox" name="cbActivate">
    <property name="geometry">
     <rect>
@@ -73,6 +63,16 @@
    </property>
    <property name="text">
     <string>Charger couches</string>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="lwFields">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>50</y>
+     <width>256</width>
+     <height>192</height>
+    </rect>
    </property>
   </widget>
  </widget>

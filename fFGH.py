@@ -28,6 +28,9 @@ import resources
 from fFGH_dialog import cFGHDialog
 import os.path
 
+#importe les classes QGIS
+from qgis.gui import *
+from qgis.core import *
 
 class cFGH:
     """QGIS Plugin Implementation."""
@@ -67,6 +70,8 @@ class cFGH:
         # TODO: We are going to let the user set this up in a future iteration
         self.toolbar = self.iface.addToolBar(u'Barre d"outil GeoHyd')
         self.toolbar.setObjectName(u'Outil GeoHyd')
+		
+		
 
     # noinspection PyMethodMayBeStatic
     def tr(self, message):
@@ -181,12 +186,35 @@ class cFGH:
 
     def run(self):
         """Run method that performs all the real work"""
+        # Signal : En cliquant sur le bouton fLoadLayers on lance la fonction derrière le bouton pbLoadLayers
+        self.dlg.pbLoadLayers.clicked.connect(self.fLoadLayers)
+
         # show the dialog
         self.dlg.show()
+		
         # Run the dialog event loop
         result = self.dlg.exec_()
+		
         # See if OK was pressed
         if result:
-            # Do something useful here - delete the line containing pass and
-            # substitute with your code.
             pass
+			
+    # On crée le code derrière le bouton pbLoadLayers déclenché lors du clic
+    def fLoadLayers(self):
+        mCanvas = self.iface.mapCanvas()
+        self.dlg.cbListLayers.clear()
+        for i in mCanvas.layers():
+           self.dlg.cbListLayers.addItem(i.name())
+
+
+
+
+
+
+
+
+
+
+
+
+        

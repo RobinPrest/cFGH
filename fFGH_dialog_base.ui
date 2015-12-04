@@ -6,38 +6,75 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>314</width>
+    <width>401</width>
     <height>331</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Plugin Geohyd</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout">
-   <item row="3" column="0">
-    <widget class="QDialogButtonBox" name="bbOK">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="standardButtons">
-      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="0">
-    <widget class="QTextBrowser" name="txtbroZone"/>
-   </item>
-   <item row="2" column="0">
-    <widget class="QCheckBox" name="cbActivate">
-     <property name="text">
-      <string>Activation</string>
-     </property>
-    </widget>
-   </item>
-   <item row="0" column="0">
-    <widget class="QComboBox" name="cbLayers"/>
-   </item>
-  </layout>
+  <widget class="QDialogButtonBox" name="bbOK">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>299</y>
+     <width>156</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QTextBrowser" name="txtbroZone">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>35</y>
+     <width>251</width>
+     <height>221</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="cbActivate">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>276</y>
+     <width>71</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Activation</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cbListLayers">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>9</y>
+     <width>251</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbLoadLayers">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>10</y>
+     <width>101</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Charger couches</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections>
